@@ -31,18 +31,5 @@ public class ProductsSaveRequestDto {
                 .build();
     }
 
-    //이거 아닌데
-    public class ProductsResponseDto{
-        private String p_name;
-        private Long p_price;
-        private String p_desc;
-
-        public ProductsResponseDto(Products entity){
-            this.p_name = entity.getP_name();
-            this.p_price = entity.getP_price();
-            this.p_desc = entity.getP_desc();
-        }
-    }
-
 
 }

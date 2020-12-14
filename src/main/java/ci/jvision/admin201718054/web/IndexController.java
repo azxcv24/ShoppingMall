@@ -6,27 +6,26 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
 
     private final ProductsService productsService;
+
     @GetMapping("/")
     public String index(Model model)
     {
-        model.addAttribute("products", productsService.findAllDesc());
+        model.addAttribute("Products", productsService.findAllDesc());
 
         return "index";
     }
 
-    @GetMapping("/users/save")
-    public String usersSave()
+    @GetMapping("/products/save")
+    public String productsSave()
     {
-        return "users-save";
+        return "products-save";
     }
 
 

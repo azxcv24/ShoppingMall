@@ -15,7 +15,7 @@ public class Products { //테이블생성
 
     @Id//pk값
     @GeneratedValue(strategy = GenerationType.IDENTITY)//자동증강
-    @Column(nullable=false)//널값 비허용
+    //@Column(nullable=false)//널값 비허용
     private Long p_id;
 
     @Column(nullable=false)

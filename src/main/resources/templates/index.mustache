@@ -3,7 +3,7 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-                <a href="/posts/save" role="button" class="btn btn-primary">상품 등록</a>
+                <a href="/products/save" role="button" class="btn btn-primary">상품 등록</a>
             </div>
         </div>
         <br>
@@ -17,12 +17,14 @@
                 </tr>
             </thread>
             <tbody id="tbody">
-                {{#products}}
+                {{#Products}}
                     <tr>
-                        <td>{{title}}</td>
-                        <td>{{author}}</td>
+                        <td>{{p_id}}</td>
+                        <td>{{p_name}}</td>
+                        <td>{{p_price}}</td>
+                        <td>{{p_desc}}</td>
                     </tr>
-                {{/products}}
+                {{/Products}}
             </tbody>
         </table>
     </div>
