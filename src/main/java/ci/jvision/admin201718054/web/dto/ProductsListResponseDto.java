@@ -13,10 +13,10 @@ public class ProductsListResponseDto {
 
 
     public ProductsListResponseDto(Products entity){
-        this.p_id=getP_id();
-        this.p_name=getP_name();
-        this.p_price=getP_price();
-        this.p_desc=getP_desc();
+        this.p_id=entity.getP_id();
+        this.p_name=entity.getP_name();
+        this.p_price=entity.getP_price();
+        this.p_desc=entity.getP_desc();
     }
 
 
