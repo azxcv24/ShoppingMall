@@ -15,6 +15,6 @@ public class ProductsApiController {
     @PostMapping("/api/v1/products")
     public Long save(@RequestBody ProductsSaveRequestDto requestDto)
     {
-        return requestDto.save(requestDto);
+        return productsService.save(requestDto);
     }
 }

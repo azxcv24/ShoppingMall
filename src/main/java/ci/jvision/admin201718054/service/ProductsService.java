@@ -16,16 +16,18 @@ import java.util.stream.Collectors;
 @Service
 public class ProductsService {
 
+    private final ProductsSaveRequestDto.ProductsResponseDto productsRepository;
+
 
     @Transactional
     public Long save(ProductsSaveRequestDto requestDto){
-        return ProductsRepository.save(requestDto.toEntity()).getId();
+        return productsRepository.save(requestDto.toEntity()).getId();
     }
 
     @Transactional
     public List<ProductsListResponseDto> findAllDesc()
     {
-        return ProductsRepository.findAllDesc().stream()
+        return productsRepository.findAllDesc().stream()
                 .map(ProductsListResponseDto::new)
                 .collect(Collectors.toList());
     }

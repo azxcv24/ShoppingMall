@@ -1,38 +1,28 @@
 {{>layout/header}}
-    <h1>스프링부트로 시작하는 웹서비스</h1>
+    <h1>웹프로그래밍 기말고사(쇼핑몰 상품관리)</h1>
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
-                <a href="/posts/deleteAll" role="button" class="btn btn-primary">전체삭제</a>
-                {{#userName}}
-                    Logged in as : <span id="user">{{userName}}</span>
-                    <a href="/logout" class="btn btn-info active" role="butto">LOGOUT</a>
-                {{/userName}}
-                {{^userName}}
-                    <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
-                    <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
-                    <a href="/oauth2/authorization/kakao" class="btn btn-warning active" role="button">Kakao Login</a>
-                {{/userName}}
+                <a href="/posts/save" role="button" class="btn btn-primary">상품 등록</a>
             </div>
         </div>
         <br>
         <table class="table table-horizontal table-bordered">
             <thread class="thread-strong">
                 <tr>
-                    <th>게시글번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
+                    <th>삼품ID</th>
+                    <th>상품명</th>
+                    <th>상품가격</th>
+                    <th>상품설명</th>
                 </tr>
             </thread>
             <tbody id="tbody">
-                {{#posts}}
+                {{#products}}
                     <tr>
-                        <td>{{id}}</td>
-                        <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                        <td>{{title}}</td>
                         <td>{{author}}</td>
                     </tr>
-                {{/posts}}
+                {{/products}}
             </tbody>
         </table>
     </div>
