@@ -16,12 +16,12 @@ import java.util.stream.Collectors;
 @Service
 public class ProductsService {
 
-    private final ProductsSaveRequestDto.ProductsResponseDto productsRepository;
+    private final ProductsRepository productsRepository;
 
 
     @Transactional
     public Long save(ProductsSaveRequestDto requestDto){
-        return productsRepository.save(requestDto.toEntity()).getId();
+        return productsRepository.save(requestDto.toEntity()).getP_id();
     }
 
     @Transactional

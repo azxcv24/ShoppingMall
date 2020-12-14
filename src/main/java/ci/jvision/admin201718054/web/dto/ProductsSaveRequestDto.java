@@ -31,6 +31,7 @@ public class ProductsSaveRequestDto {
                 .build();
     }
 
+    //이거 아닌데
     public class ProductsResponseDto{
         private String p_name;
         private Long p_price;
